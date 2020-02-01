@@ -1,0 +1,273 @@
+
+	{% extends 'website/base.html' %}
+    <!-- end: BANNER -->
+    {% load staticfiles%}
+
+  {% block news %}
+
+    <!-- <img src="{{a.content.url}}" > -->
+    <!-- <object width="400" height="400" data="{{a.content.url}}"></object> -->
+  <!-- start: CONTENT DETAIL -->
+    <section class="sec_contentdetail">
+        <div class="container">
+            <div class="div contentpage">
+                <div class="left_content">
+                    <div class="news_left">
+                        <div class="news_left_inner">
+                            <h3>Giới thiệu</h3>
+                            <ul class="menu_left">
+                                <li  > <a href="/?v=4&z=1"><span>GIỚI THIỆU</span></a></li>
+				<li  ><a href="/?v=4&z=2"><span>VTRUE LÀ GÌ?</span></a></li>
+                <li  ><a href="/?v=4&z=3"><span>NHỮNG ƯU THẾ KHÁC BIỆT?</span></a></li>
+                
+                <li ><a href="/?v=4&z=5"><span>HỆ THỐNG XÁC THỰC ĐIỆN TỬ CÓ THỰC SỰ ĐẢM BẢO?</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block_show_md">
+                        <div class="frame_video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m4HK7lKjwfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="left_customer_logo customer_slide_logo">
+                            <div class="left_slider_logo owl-carousel owl-theme owl-loaded">
+                                <a href="#"><img src="{% static '/img/logokh/Gia Nguyen.jpg'%}" width=131 height=68 alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Huyndai.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src=" {% static '/img/logokh/Kangroo.png' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Logo-Hapro.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Me linh.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Ton hoa sen 2.png' %}" width=131 height=68  alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="short_news">
+                            <div class="row_title_left_news">
+                                <div class="row_title_block">
+                                    <h3 class="title_product">Tin tức</h3>
+                                </div>
+                            </div>
+                            <ul class="ul_list_news_left">
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=9">
+                                        <span><img src="{% static '/img/thongtin/75080033fb2c1bf5e036d8c73b058157_FullSizeRender.jpg' %}" alt="tin tuc" /></span>
+                                        <p>HỆ THỐNG XÁC THỰC VTRUE: 'LÁ CHẮN THÉP' CHỐNG HÀNG GIẢ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=8">
+                                        <span><img src="{% static '/img/thongtin/ttxvn-120515ky-ket-1431485141670.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>LẦN ĐẦU TIÊN KIỂM SOÁT HÀNG GIẢ BẰNG MÃ XÁC THỰC ĐIỆN TỬ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=10">
+                                        <span><img src="{% static '/img/thongtin/temjpg1431449698.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=11">
+                                        <span><img src="{% static '/img/thongtin/NQH_5501.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>CHUNG TAY CHỐNG HÀNG GIẢ VỚI HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="rightcontent">
+                   
+					
+					 <ul class="ul_breadcrumb">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        
+                    </ul>
+						 <h3 class="title_subpage">Lễ ký kết phối hợp triển khai Hệ thống Ứng dụng công nghệ thông tin và truyền thông góp phần đấu tranh chống buôn lậu, gian lận thương mại và hàng giả</h3>
+						<ul class="time_viewer">
+                        <li><i class="fa fa-clock-o"></i>04/07/2016</li>
+                        <li><i class="fa fa-eye"></i>250</li>
+                    </ul>
+
+                    <div class="detail_right">
+                        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ 
+{% if cl %}
+    {% for item in cl %}
+        {% if item.check == '0' %}
+            <p align="justify" style="font-size:120%;">
+                {{item.value}}
+            </p>
+        {% else %}
+            <table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="center">
+        <IMG alt="Tem-2.4x2.4" src="../../../media/{{item.value}}" width=600 align="center">
+        
+        </td>
+                    
+                </tr>
+                <tr>
+                    <td align="center">
+                    <p align="justify">
+                        <i>{{item.chuthich}}</i></p>
+                    </td>			
+                </tr>
+            </table>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<!-- <p align="justify" style="font-size:120%;">
+Chiều 12/5, Cục Quản lý thị trường (Bộ Công Thương), Cổng Thông tin điện tử Chính phủ, Viện Kiểm nghiệm an toàn vệ sinh thực phẩm Quốc gia (Bộ Y tế) và Công ty Cổ phần VNet phối hợp tổ chức Lễ ký kết hợp tác triển khai Hệ thống Ứng dụng công nghệ thông tin và truyền thông góp phần đấu tranh chống buôn lậu, gian lận thương mại và hàng giả. Thứ trưởng Bộ Công Thương Đỗ Thắng Hải tham dự và chứng kiến Lễ ký kết.
+</p>	
+<p align="justify" style="font-size:120%;">
+Lễ ký kết được tổ chức trong tình hình hiện nay vấn nạn hàng giả đang gây nhức nhối cho xã hội, khiến người dân hoang mang, ảnh hưởng đến sản xuất của các doanh nghiệp (DN), làm thất thu thuế của Nhà nước.  </p>
+
+ <table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center">
+<IMG alt="Tem-2.4x2.4" src="{%static '/img/thongtin/moit-ki ket 1.jpg' %}" width=600 align="center">
+
+</td>
+			
+		</tr>
+		<tr>
+			<td align="center">
+			<p align="justify">
+				<i>Lễ ký kết phối hợp triển khai Hệ thống Ứng dụng công nghệ thông tin và truyền thông góp phần đấu tranh chống buôn lậu, gian lận thương mại và hàng giả</i></p>
+			</td>			
+		</tr>
+    </table>
+    <br>
+
+<p align="justify" style="font-size:120%;">Tại Lễ ký kết, ông Vi Quang Đạo, Phó Tổng giám đốc Cổng Thông tin điện tử Chính phủ, Tổng biên tập Báo Điện tử Chính phủ nhận định: Thoả thuận hợp tác giữa các cơ quan, đơn vị khi đi vào hoạt động sẽ góp phần tăng cường năng lực thực hiện sự chỉ đạo của Chính phủ, Thủ tướng Chính phủ và các Bộ, ngành chức năng, chính quyền địa phương, về công tác chống gian lận thương mại; tăng cường phối hợp và hợp tác giữa cơ quan quản lý Nhà nước và DN trong cuộc đấu tranh chống gian lận thương mại, hàng giả, hàng nhái. Hệ thống sẽ giúp nâng cao nhận thức của người dân về vấn đề chống hàng giả, hàng nhái; phối hợp với các cơ quan, đơn vị trong việc tiếp nhận thông tin phản hồi của DN, người tiêu dùng về gian lận thương mại, hỗ trợ bảo vệ lợi ích chính đáng của DN và người tiêu dùng. Đồng thời, việc phối hợp sẽ hình thành kênh thông tin trao đổi hai chiều giữa các cơ quan quản lý Nhà nước với người tiêu dùng và DN, qua đó phát hiện những điểm nóng và dấu hiệu sai phạm để có biện pháp xử lý kịp thời.
+ </p>
+  <p align="justify" style="font-size:120%;">Được biết, tất cả thông tin của sản phẩm cũng như DN đều được thể hiện trên Tem xác thực điện tử VTrue và dán vào các sản phẩm để người tiêu dùng có thể tra cứu được chính xác nguồn gốc qua các hình thức bao gồm: website xacthuc.chinhphu.vn; Tổng đài tin nhắn 8173; Tổng đài Callcenter 19006609 và Zalo. Mã xác thực là dãy số in trên tem được phủ nhũ bạc và có cấu trúc gồm 10 ký tự bằng số. Mỗi mã xác thực điện tử được gắn cụ thể cho duy nhất 1 sản phẩm của 1 DN. Lần đầu tiên khách hàng mua sản phẩm cào mã số xác thực và sử dụng các hình thức tra cứu sẽ biết được sản phẩm họ đang sử dụng là do DN nào sản xuất/nhập khẩu. Nếu mã xác thực được nhân bản và làm giả, thì khi tra cứu từ lần thứ 2 trên mã đó sẽ có cảnh báo cho người tiêu dùng. Cùng lúc, cảnh báo hàng giả sẽ tự động chuyển tới Ban Quản trị hệ thống và DN sử dụng dịch vụ. Các xác minh trực tiếp với người tiêu dùng sẽ là căn cứ truy ngược để chuyển đến các cơ quan chức năng xử lý.
+ </p>
+
+ <table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center">
+<IMG alt="Tem-2.4x2.4" src="{%static '/img/thongtin/moit-ki ket 2.jpg' %}" width=600 align="center"></td>
+			
+		</tr>
+		<tr>
+			<td align="center">
+    <br>
+			
+		</tr><br>
+		<tr>
+			<td align="center">
+<IMG alt="Tem-2.4x2.4" src="{%static '/img/thongtin/moit-ki ket 3.jpg' %}" width=600 align="center"></td>
+			
+		</tr>
+		<tr>
+			<td align="center">
+			<p align="justify">
+				<i>Thứ trưởng Đỗ Thắng Hải chứng kiến Cục Quản lý thị trường (Bộ Công Thương), Cổng TTĐT Chính phủ, Viện Kiểm nghiệm an toàn vệ sinh thực phẩm Quốc gia (Bộ Y tế) và Công ty Cổ phần VNet đã có buổi lễ ký kết phối hợp triển khai Hệ thống Ứng dụng công nghệ thông tin và truyền thông góp phần đấu tranh chống buôn lậu, gian lận thương mại và hàng giả</i></p>
+			</td>			
+		</tr>
+	</table><br>
+
+ <p align="justify" style="font-size:120%;">Ngoài ra, doanh nghiệp sử dụng Hệ thống xác thực điện tử VTrue có thể tích hợp thêm những tính năng khác như: Bảo hành điện tử, Các chương trình Marketing, chương trình Chăm sóc khách hàng, ...
+ </p>
+ 
+  <p align="justify"><i>Theo Cổng thông tin điện tử Bộ Công Thương</i>
+ </p>
+
+ 
+ -->
+ <object width="100%" height='2000' data="{{a.content.url}}"></object>
+                    </div>
+                    <div class="right_register_btn">
+                        <a class="btn_register_now" href="http://dangky.vtrue.vn">Đăng ký ngay</a> </div>
+					
+                    <div class="div_readmore">
+                        <div class="row_title_block">
+                            <h3 class="title_product">Đọc thêm</h3>
+                        </div>
+                        <ul class="list_news_more">
+                           <li><a href="/?v=4&z=6">LỄ KÍ KẾT PHỐI HỢP TRIỂN KHAI HỆ THỐNG ỨNG DỤNG</a></li>
+							<li><a href="/?v=4&z=7">NGƯỜI DÂN CÓ THỂ PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ XÁC THỰC ĐIỆN TỬ VTRUE</a></li>
+							<li><a href="/?v=4&z=8">LẦN ĐẦU TIÊN KIỂM SOÁT HÀNG GIẢ BẰNG MÃ XÁC THỰC ĐIỆN TỬ</a></li>
+						<li><a href="/?v=4&z=9">HỆ THỐNG XÁC THỰC VTRUE  LÁ CHẮN THÉP' CHỐNG HÀNG GIẢ</a></li>
+        	<li><a href="/?v=4&z=10">PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ ĐIỆN TỬ VTRUE</a></li>
+        	<li><a href="/?v=4&z=11">CHUNG TAY CHỐNG HÀNG GIẢ VỚI HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTRUE</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="block_show_xs">
+                        <div class="frame_video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nkIQWnU6lZk" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+
+                        <div class="left_customer_logo customer_slide_logo">
+                            <div class="left_slider_logo owl-carousel owl-theme owl-loaded">
+                               <a href="#"><img src="img/logokh/Gia Nguyen.jpg" width=131 height=68 alt="" /></a> 
+								<a href="#"><img src="img/logokh/Huyndai.jpg" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/kangroo-logo.png" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/Logo-Hapro.jpg" width=131 height=68  alt="" /></a> 
+								<a href="#"><img src="img/logokh/Me linh.jpg" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/Ton hoa sen 2.png" width=131 height=68  alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="short_news">
+                            <div class="row_title_left_news">
+                                <div class="row_title_block">
+                                    <h3 class="title_product">Tin tức</h3>
+                                </div>
+                            </div>
+                            <ul class="ul_list_news_left">
+                                 <li class="clearfix">
+              <p class="lNews_l_img"><a href="/?v=4&z=9"><img src="thongtin/img/75080033fb2c1bf5e036d8c73b058157_FullSizeRender.jpg" width="102" height="71" alt="" /></a></p>
+              <p class="lNews_l_txt"><a href="/?v=4&z=9">HỆ THỐNG XÁC THỰC VTRUE  LÁ CHẮN THÉP' CHỐNG HÀNG GIẢ</a></p>
+            </li>
+            <li class="clearfix">
+              <p class="lNews_l_img"><a href="/?v=4&z=8"><img src="thongtin/img/ttxvn-120515ky-ket-1431485141670.jpg" width="102" height="71" alt="" /></a></p>
+              <p class="lNews_l_txt"><a href="/?v=4&z=8"> LẦN ĐẦU TIÊN KIỂM SOÁT HÀNG GIẢ BẰNG MÃ XÁC THỰC ĐIỆN TỬ</a></p>
+            </li>
+            <li class="clearfix">
+              <p class="lNews_l_img"><a href="/?v=4&z=10"><img src="thongtin/img/temjpg1431449698.jpg" width="102" height="71" alt="" /></a></p>
+              <p class="lNews_l_txt"><a href="/?v=4&z=10">PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ ĐIỆN TỬ VTRUE </a></p>
+            </li>
+            <li class="clearfix">
+              <p class="lNews_l_img"><a href="/?v=4&z=11"><img src="thongtin/img/NQH_5501.jpg" width="102" height="71" alt="" /></a></p>
+              <p class="lNews_l_txt"><a href="/?v=4&z=11">CHUNG TAY CHỐNG HÀNG GIẢ VỚI HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTRUE</a></p>
+            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: CONTENT DETAIL -->
+<script>
+
+$(document).ready(function() {
+      var owl = $("#lkh1");
+      owl.owlCarousel({
+      items : 2, //10 items above 1000px browser width
+      itemsDesktop : [1000,2], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+      itemsTablet: [600,2],
+	    autoPlay : 3000,
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option      
+      });
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+    });
+</script>
+ {% endblock %}

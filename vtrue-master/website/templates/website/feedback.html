@@ -1,0 +1,248 @@
+{% extends 'website/base.html' %}
+{% load staticfiles%}
+{% block feedback %}
+<!-- start: CONTENT DETAIL -->
+      <section class="sec_contentdetail">
+        <div class="container">
+            <div class="div contentpage">
+                <div class="left_content">
+                    <div class="news_left">
+                        <div class="news_left_inner">
+                            <h3>Giới thiệu</h3>
+                            <ul class="menu_left">
+                                <li  > <a href="/?v=4&z=1"><span>GIỚI THIỆU</span></a></li>
+				<li  ><a href="/?v=4&z=2"><span>VTRUE LÀ GÌ?</span></a></li>
+                <li  ><a href="/?v=4&z=3"><span>NHỮNG ƯU THẾ KHÁC BIỆT?</span></a></li>
+
+                <li ><a href="/?v=4&z=5"><span>HỆ THỐNG XÁC THỰC ĐIỆN TỬ CÓ THỰC SỰ ĐẢM BẢO?</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block_show_md">
+                        <div class="frame_video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m4HK7lKjwfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="left_customer_logo customer_slide_logo">
+                            <div class="left_slider_logo owl-carousel owl-theme owl-loaded">
+                                <a href="#"><img src="{% static '/img/logokh/Gia Nguyen.jpg'%}" width=131 height=68 alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Huyndai.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src=" {% static '/img/logokh/Kangroo.png' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Logo-Hapro.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Me linh.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Ton hoa sen 2.png' %}" width=131 height=68  alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="short_news">
+                            <div class="row_title_left_news">
+                                <div class="row_title_block">
+                                    <h3 class="title_product">Tin tức</h3>
+                                </div>
+                            </div>
+                            <ul class="ul_list_news_left">
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=9">
+                                        <span><img src="{% static '/img/thongtin/75080033fb2c1bf5e036d8c73b058157_FullSizeRender.jpg' %}" alt="tin tuc" /></span>
+                                        <p>HỆ THỐNG XÁC THỰC VTRUE: 'LÁ CHẮN THÉP' CHỐNG HÀNG GIẢ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=8">
+                                        <span><img src="{% static '/img/thongtin/ttxvn-120515ky-ket-1431485141670.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>LẦN ĐẦU TIÊN KIỂM SOÁT HÀNG GIẢ BẰNG MÃ XÁC THỰC ĐIỆN TỬ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=10">
+                                        <span><img src="{% static '/img/thongtin/temjpg1431449698.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=11">
+                                        <span><img src="{% static '/img/thongtin/NQH_5501.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>CHUNG TAY CHỐNG HÀNG GIẢ VỚI HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="rightcontent">
+                    <ul class="ul_breadcrumb">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a>Phản hồi</a></li>
+                    </ul>
+                    <h3 class="title_subpage">THÔNG TIN PHẢN HỒI SẼ GIÚP CHÚNG TÔI PHỤC VỤ TỐT HƠN!</h3>
+
+                    <div class="form_right">
+                        
+          <form action="/index.htm?action=feedback" method="post" name="feedback" onsubmit="return feedback_onsubmit()">
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>Họ và tên</label>
+                                </div>
+                                <div class="div_input_inner">
+                                    <input type="text" id="fullname" name="fullname"class="in_dkf_r" />
+									
+                                </div>
+								<input name="token" hidden type="text" size="60" maxlength=200 value="B8AC3FC2FAFE0CEFA6732A658DDD8C8CAA53E9A6750A5DD58010E353DF44C75D" ID="Text4">
+                            </div>
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>Email</label>
+                                </div>
+                                <div class="div_input_inner">
+                                     <input type="text" id="email" name="email" class="in_dkf_r" />
+                                </div>
+                            </div>
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>Điện thoại</label>
+                                </div>
+                                <div class="div_input_inner">
+                                   <input type="text" id="mobile" name="mobile" class="in_dkf_r" />
+                                </div>
+                            </div>
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>Nội dung</label>
+                                </div>
+                                <div class="div_input_inner">
+                                    <textarea  id="textarea" name="textarea" cols="10" rows="10" ></textarea>
+                                </div>
+                            </div>
+                           
+                            <div class="div_input">
+                                <div class="div_label">
+                                </div>
+                                <div class="div_input_inner">
+                                    <div class="div_btn_check">
+                                        <button class="btn_gen"><span>Đồng ý</span></button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+						 
+                    </div>
+
+					<script language=javascript>
+	function feedback_onsubmit()
+	{	
+	with (feedback)
+	{	
+		if ((fullname.value=="")||(fullname.value.indexOf(" ")>10))
+		{
+		alert("Nhập họ và tên");
+		fullname.focus();
+		return false;
+		}
+		if ((email.value=="")||(email.value.length<5))
+		{
+		alert("Đề nghị nhập email");
+		email.focus();
+		return false;
+		}
+		if ((mobile.value=="")||(mobile.value.length<9))
+		{
+		alert("Đề nghị nhập điện thoại");
+		mobile.focus();
+		return false;
+		}
+		if ((textarea.value=="")||(textarea.value.length<15))
+		{
+		alert("Đề nghị nhập nội dung");
+		textarea.focus();
+		return false;
+		}
+	}
+	return true;
+	}
+	</script>
+
+					
+                    <div class="bot_contact">
+                        <h3>Liên hệ</h3>
+                        <p>Trụ sở chính</p>
+                        <ul class="ul_contact_info">
+                            <li>
+                                <img src="img/ico-map.png" alt="map">
+                                <span>Số 26BT1 Bắc Linh Đàm, Quận Hoàng Mai, Thành phố Hà Nội</span>
+                            </li>
+                            <li>
+                                <img src="img/ico-phone.png" alt="map">
+                                <span>1900 6609</span>
+                            </li>
+                            
+                            <li>
+                                <img src="img/icon-email.png" alt="map">
+                                <a href="mailto: info@vtrue.vn">info@vtrue.vn</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="block_show_xs">
+                        <div class="frame_video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nkIQWnU6lZk" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+
+                        <div class="left_customer_logo customer_slide_logo">
+                            <div class="left_slider_logo owl-carousel owl-theme owl-loaded">
+                                <a href="#"><img src="img/logokh/Gia Nguyen.jpg" width=131 height=68 alt="" /></a> 
+								<a href="#"><img src="img/logokh/Huyndai.jpg" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/kangroo-logo.png" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/Logo-Hapro.jpg" width=131 height=68  alt="" /></a> 
+								<a href="#"><img src="img/logokh/Me linh.jpg" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="img/logokh/Ton hoa sen 2.png" width=131 height=68  alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="short_news">
+                            <div class="row_title_left_news">
+                                <div class="row_title_block">
+                                    <h3 class="title_product">Tin tức</h3>
+                                </div>
+                            </div>
+                            <ul class="ul_list_news_left">
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=9">
+                                        <span><img src="thongtin/img/75080033fb2c1bf5e036d8c73b058157_FullSizeRender.jpg" alt="tin tuc" /></span>
+                                        <p>Tem xác thực VTrue: 'Lá chắn thép' chống hàng giả.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=8">
+                                        <span><img src="thongtin/img/ttxvn-120515ky-ket-1431485141670.jpg" width="102" height="71" alt="" /></span>
+                                        <p>Lần đầu tiên kiểm soát hàng giả bằng mã xác thực điện tử</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=10">
+                                        <span><img src="thongtin/img/temjpg1431449698.jpg" width="102" height="71" alt="" /></span>
+                                        <p>Phát hiện hàng giả qua Tem điện tử VTrue</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=11">
+                                        <span><img src="thongtin/img/NQH_5501.jpg" width="102" height="71" alt="" /></span>
+                                        <p>Chung tay chống hàng giả với Tem xác thực</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: CONTENT DETAIL -->
+{% endblock %}

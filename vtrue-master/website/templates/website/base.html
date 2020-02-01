@@ -1,0 +1,301 @@
+{% load static %}
+<!- --#include file=headerno.htm-->
+<!DOCTYPE html>
+<html class="full" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vtrue</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/bootstrap.min.js' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/colorbox.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type='text/css'>
+	<!-- Facebook Pixel Code -->
+	<script>
+ window.addEventListener('load', function() {
+    jQuery('.contact-form').submit(function() {
+      gtag('event', 'submit', {
+        'event_category': 'form',
+        'event_label': 'success',
+      });
+
+    })
+
+
+ var x = 0;
+  jQuery('[title="chat widget"]').contents().find('#chatTextarea').click(function(){
+  if(x==0){
+  if(jQuery('[title="chat widget"]').contents().find('.message').length>0){
+    gtag('event', 'send', {'event_category': 'chat','event_label':'online'});
+  x=1;
+  }
+  }
+  })
+
+jQuery('[href*="tel:"]').click(function(){
+    gtag('event', 'click', {'event_category': 'button','event_label':jQuery(this).attr('href')});
+  })
+
+
+})
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=207114346610558&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="https://yp371.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+
+
+
+<script language=javascript src="{% static 'fnc_Validdates.js' %}"></script>
+<script language=javascript src="{% static 'date-picker.js' %}"></script>
+<script language="javascript" type="">
+
+function comboChange(){
+    document.parentForm.submit();
+  }
+function checkValues(){
+if (document.parentForm.FDate.value==""){
+    alert("Chưa nhập ngày");
+    document.parentForm.FDate.focus();
+    return false;
+  }
+ else if (document.parentForm.TDate.value.length!=10){
+    alert("Ngày dạng: mm/dd/yyyy");
+    document.parentForm.TDate.focus();
+    return false;
+  }
+
+ else if (document.parentForm.FDate.value!="" && document.parentForm.FDate.value.length!=10){
+    alert("Ngày dạng: mm/dd/yyyy");
+    document.parentForm.FDate.focus();
+    return false;
+  }
+  else if(document.parentForm.FDate.value.substring(0,2)!=document.parentForm.TDate.value.substring(0,2)){
+  alert("Tra cứu từ ngày tới ngày phải nằm trong một tháng !");
+  return false;
+  }
+  else if (document.parentForm.sdt.value==""){
+    alert("Nhập số mobile!");
+    document.parentForm.sdt.focus();
+    return false;
+  }
+  /*if (isNaN(document.parentForm.sdt.value)){
+    alert("Số mobile nhập không đúng!");
+    document.parentForm.User_ID.focus();
+    return false;
+  }*/
+  /*else if (document.parentForm.sdt.value.length!=11){
+    alert("Số mobile sai: 849xxxxxxxx");
+    document.parentForm.sdt.focus();
+    return false;
+  }*/
+  return true;
+}
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- start: HEADER -->
+    <section class="sec_header">
+        <div class="container">
+            <div class="content_top">
+                <div class="logo_login">
+                    <a href="/main"><img src="{% static 'img/vtrue_logo.png' %}" alt="vtrue" /></a>
+                    <div class="hotline_top">
+                        <a href="tel: 1900 6609">Hotline: <span>1900 6609</span></a>
+                    </div>
+
+                    <div class="div_login">
+                        <ul>
+                            <li><a href="http://dangky.vtrue.vn">Đăng ký</a></li>
+                            <li><a href="/?v=8">Đăng nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div_nav">
+                    <div class="div_navigator"><a href=""><i class="fa fa-bars"></i></a></div>
+
+                    <div class="div_nav_bar">
+                        <div class="menu-container">
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="/main">Trang chủ</a></li>
+                                    <li><a href="/intro">Giới thiệu</a></li>
+                                    <li><a href="/news">Tin tức</a></li>
+                                    <li><a href="/company">Doanh nghiệp</a></li>
+                                    <li><a href="/feedback">Phản hồi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end: HEADER -->
+    {% block news %} {% endblock %}
+    {% block intro %} {% endblock %}
+    {% block company %} {% endblock %}
+    {% block feedback %} {% endblock %}
+    {% block main %} {% endblock %}
+    {% block sign-in %} {% endblock %}
+    {% block register %} {% endblock %}
+    <section class="sec_footer">
+        <div class="container">
+            <div class="row row_footer_menu">
+                <div class="footer_menu col-md-6">
+                    <ul class="list_footer_menu">
+                        <li><a href="/?v=4">Giới thiệu</a></li>
+                        <li><a href="/?v=4&z=6">Tin tức</a></li>
+                        <li><a href="/?v=6">Doanh nghiệp</a></li>
+                        <li><a href="/?v=7">Phản hồi</a></li>
+                    </ul>
+                </div>
+                <!--div class="footer_hotline col-md-6">
+                    <a href="tel: 1900 6609">Hotline: <span>1900 6609</span></a>
+                </div-->
+            </div>
+
+            <div class="row row_info_contact">
+                <div class="info_com col-md-4 col-sm-5">
+                    <h3>HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTrue</h3>
+                    <p>- Cổng thông tin điện tử Chính phủ</p>
+                    <p>- Cục Quản lý thị trường</p>
+                    <p>- Viện Kiểm nghiệm ATVSTP Quốc gia</p>
+                    <p>- Công ty CP VNet</p>
+					<form action="/index.htm?action=addmail" method="post" onsubmit="return frmmail_onsubmit()"  name="frmmail" ID="Form4">
+                        {% csrf_token %}
+                        <div class="get_info">
+                        <p>Đăng ký nhận thông tin</p>
+                        <div class="row_input">
+
+							<input type="text" name="txtEmail1" size="60" maxlength=80 value="" ID="Text2"   />
+                        </div>
+                        <div class="div_sent_bot">
+                            <button class="btn_gen"><span>Đăng ký</span></button>
+                        </div>
+                    </div>
+					</form>
+                </div>
+<script language=javascript>
+	function frmmail_onsubmit()
+	{
+	with (frmmail)
+	{
+		{
+
+		{if(txtEmail1.value=="") {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		if(txtEmail1.value.indexOf(" ")>0) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		if(txtEmail1.value.indexOf("@")==-1) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		var i=1; var sLength=txtEmail1.value.length;
+		if(txtEmail1.value.indexOf(".")==-1) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		if(txtEmail1.value.indexOf("..")!=-1) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		if(txtEmail1.value.indexOf("@")!=txtEmail1.value.lastIndexOf("@")) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		if(txtEmail1.value.lastIndexOf(".")==txtEmail1.value.length-1) {alert("Nhập địa chỉ email đúng định dạng");txtEmail1.focus(); return false;}
+		var str="abcdefghikjlmnopqrstuvwxyz-@._0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for(var j=0;j<txtEmail1.value.length;j++)
+		if(str.indexOf(txtEmail1.value.charAt(j))==-1)
+		return false;
+		}
+
+
+		}
+	}
+	return true;
+	}
+	</script>
+
+
+                <div class="col_social col-md-2 col-sm-2">
+                    <div class="div_col_social">
+                        <ul>
+                            <li><a class="a_facebook" href="https://www.facebook.com/xacthuc.chinhphu.vn/"><i class="fa fa-facebook"></i></a></li>
+
+                           <li><a class="a_youtube" href="https://www.youtube.com/channel/UCBRbn4DDGwq582xy8HMTW9w"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col_contact_info col-md-6 col-sm-5">
+                    <ul class="ul_contact_info">
+                        <li>
+                            <img src="{% static 'img/ico-map.png' %}" alt="map" />
+                            <span>Số 26BT1 Bắc Linh Đàm, Quận Hoàng Mai, Thành phố Hà Nội</span>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/ico-phone.png' %}" alt="map" />
+                            <span>19006609</span>
+                        </li>
+                        <li>
+                            <img src="{%static 'img/icon-email.png' %}" alt="map" />
+                            <a href="mailto: contact@vtrue.vn">info@vtrue.vn</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <aside class="sec_copyright">
+        <div>
+            <p>Bản quyền Hệ thống xác thực diện tử VTrue © 2019.</p>
+        </div>
+    </aside>
+    <!-- end: FOOTER -->
+    <a id="yt-totop" class="backtotop" href="#"></a>
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5afd57a15f7cdf4f05344d63/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121841127-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121841127-1');
+</script>
+

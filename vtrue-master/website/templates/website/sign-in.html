@@ -1,0 +1,53 @@
+{% extends 'website/base.html' %}
+{% block sign-in %}
+
+ <div class="rightcontent">
+  <div class="popupdangnhapInner">
+    <div class="dnOut">
+      <ul class="ul_breadcrumb">
+                        <li><a href="/main">Trang chủ</a></li>
+                        <li><a>Đăng nhập</a></li>
+                    </ul>
+      <form action="{% url 'user:signin' %}" method="post" name="login" onsubmit="return frmRegister_onsubmit()">
+        {% csrf_token %}
+        <ul class="dn_pp_lst">
+          <li>
+            <input type="text" id="txt" name="userName" placeholder="E-mail" class="in_dkf_r" />
+          </li>
+          <li>
+            <input type="password" id="txt1" name="password" placeholder="Mật khẩu" class="in_dkf_r" />&nbsp;
+			<input name="token" hidden type="text" size="60" maxlength=200 value="EE725CCAF196EF907509C3A28F89FD8534356B29E1B9527F5040B045619E59BC" ID="Text4">
+          </li>
+          <li class="pd2 clearfix">&nbsp; </li>
+
+          <li class="clearfix">
+                            <button class="btn_gen"><span>Đăng nhập</span></button>
+
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<script language=javascript>
+	function frmRegister_onsubmit()
+	{
+	with (login)
+	{
+		if ((txtUsername.value=="")||(txtUsername.value.indexOf(" ")>0)||(txtUsername.value>40))
+		{
+		alert("Nhập Tên truy cập");
+		txtUsername.focus();
+		return false;
+		}
+		if ((txtPassword.value=="")||(txtPassword.value.length<5))
+		{
+		alert("Đề nghị nhập mật khẩu");
+		txtPassword.focus();
+		return false;
+		}
+	}
+	return true;
+	}
+	</script>
+{% endblock %}

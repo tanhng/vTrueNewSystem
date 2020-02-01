@@ -1,0 +1,354 @@
+{% extends 'website/base.html' %}
+{% load staticfiles%}
+{% block register %}
+
+  <!-- start: CONTENT DETAIL -->
+    <section class="sec_contentdetail">
+        <div class="container">
+            <div class="div contentpage">
+                <div class="left_content">
+
+                    <div class="block_show_md">
+                        <div class="frame_video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m4HK7lKjwfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                         <div class="left_customer_logo customer_slide_logo">
+                            <div class="left_slider_logo owl-carousel owl-theme owl-loaded">
+                                <a href="#"><img src="{% static '/img/logokh/Gia Nguyen.jpg'%}" width=131 height=68 alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Huyndai.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src=" {% static '/img/logokh/Kangroo.png' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Logo-Hapro.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Me linh.jpg' %}" width=131 height=68  alt="" /></a>
+								<a href="#"><img src="{% static '/img/logokh/Ton hoa sen 2.png' %}" width=131 height=68  alt="" /></a>
+                            </div>
+                        </div>
+
+                        <div class="short_news">
+                            <div class="row_title_left_news">
+                                <div class="row_title_block">
+                                    <h3 class="title_product">Tin tức</h3>
+                                </div>
+                            </div>
+                            <ul class="ul_list_news_left">
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=9">
+                                        <span><img src="{% static '/img/thongtin/75080033fb2c1bf5e036d8c73b058157_FullSizeRender.jpg' %}" alt="tin tuc" /></span>
+                                        <p>HỆ THỐNG XÁC THỰC VTRUE: 'LÁ CHẮN THÉP' CHỐNG HÀNG GIẢ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=8">
+                                        <span><img src="{% static '/img/thongtin/ttxvn-120515ky-ket-1431485141670.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>LẦN ĐẦU TIÊN KIỂM SOÁT HÀNG GIẢ BẰNG MÃ XÁC THỰC ĐIỆN TỬ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=10">
+                                        <span><img src="{% static '/img/thongtin/temjpg1431449698.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>PHÁT HIỆN HÀNG GIẢ QUA DỊCH VỤ ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="block_unit_news" href="/?v=4&z=11">
+                                        <span><img src="{% static '/img/thongtin/NQH_5501.jpg' %}" width="102" height="71" alt="" /></span>
+                                        <p>CHUNG TAY CHỐNG HÀNG GIẢ VỚI HỆ THỐNG XÁC THỰC ĐIỆN TỬ VTRUE</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="rightcontent">
+                    <ul class="ul_breadcrumb">
+                        <li><a href="http://vtrue.vn/?v=1">Trang chủ</a></li>
+                        <li><a>Đăng ký</a></li>
+                        <!-- <h1>{{form}}</h1> -->
+                    </ul>
+                    <h3 class="title_subpage">Đăng ký sử dụng dịch vụ xác thực VTrue, bảo vệ chính mình!</h3>
+
+                    <div class="form_register_right form_right">
+                        <!-- onsubmit="return frmRegister_onsubmit()" -->
+          <form action="{% url 'user:signup' %}" method="post"  name="frmRegister" id="Form3">
+            {% csrf_token %}
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Tên tổ chức</label>
+                                </div>
+                                <div class="div_input_inner">
+                                    <!-- <input name="TenDN" type="text" size="60" maxlength="200" id="Text4"> -->
+                                    {{form.TenDN}}
+                                </div>
+                            </div>
+							<!-- <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Mã số Thuế</label>
+                                </div>
+                                <div class="div_input_inner">
+                                     <input name="MaDN" type="text" size="60" maxlength="200" id="Text4">
+                                </div>
+                            </div> -->
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Địa chỉ</label>
+                                </div>
+                                <div class="div_input_inner">
+                                    <!-- <input name="DiaChiDangkyKD" type="text" size="60" maxlength="200" id="Text3">
+                                     -->
+                                     {{form.DiaChiDangkyKD}}
+                                </div>
+                            </div>
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Tỉnh/Thành</label>
+                                </div>
+                                <div class="div_input_inner">
+                                    <script src="Vtrue-register_files/selectQuanhuyen.js"></script>
+                                {{form.matinhthanh}}
+						<!-- <select id="soflow-color" width="250" name="matinh" onchange="showQuanhuyen(this.value)">
+						    &lt;--<option value="0" selected="selected">--- Chọn tỉnh/Thành ---</option>
+
+						    <option value="24">  Hà Nội </option>
+
+						    <option value="29">  TP Hồ Chí Minh </option>
+
+						    <option value="01"> An Giang </option>
+
+						    <option value="02"> Bà Rịa-Vũng Tàu </option>
+
+						    <option value="05"> Bắc Giang </option>
+
+						    <option value="04"> Bắc Kạn </option>
+
+						    <option value="03"> Bạc Liêu </option>
+
+						    <option value="06"> Bắc Ninh </option>
+
+						    <option value="07"> Bến Tre </option>
+
+						    <option value="09"> Bình Định </option>
+
+						    <option value="08"> Bình Dương </option>
+
+						    <option value="10"> Bình Phước </option>
+
+						    <option value="11"> Bình Thuận </option>
+
+						    <option value="12"> Cà Mau </option>
+
+						    <option value="14"> Cần Thơ </option>
+
+						    <option value="13"> Cao Bằng </option>
+
+						    <option value="15"> Đà Nẵng </option>
+
+						    <option value="16"> Đắk Lắk </option>
+
+						    <option value="17"> Đắk Nông </option>
+
+						    <option value="18"> Điện Biên </option>
+
+						    <option value="19"> Đồng Nai </option>
+
+						    <option value="20"> Đồng Tháp </option>
+
+						    <option value="21"> Gia Lai </option>
+
+						    <option value="22"> Hà Giang </option>
+
+						    <option value="23"> Hà Nam </option>
+
+						    <option value="25"> Hà Tĩnh </option>
+
+						    <option value="26"> Hải Dương </option>
+
+						    <option value="27"> Hải Phòng </option>
+
+						    <option value="30"> Hậu Giang </option>
+
+						    <option value="28"> Hòa Bình </option>
+
+						    <option value="31"> Hưng Yên </option>
+
+						    <option value="32"> Khánh Hòa </option>
+
+						    <option value="33"> Kiên Giang </option>
+
+						    <option value="34"> Kon Tum </option>
+
+						    <option value="35"> Lai Châu </option>
+
+						    <option value="38"> Lâm Đồng </option>
+
+						    <option value="37"> Lạng Sơn </option>
+
+						    <option value="36"> Lào Cai </option>
+
+						    <option value="39"> Long An </option>
+
+						    <option value="40"> Nam Định </option>
+
+						    <option value="41"> Nghệ An </option>
+
+						    <option value="42"> Ninh Bình </option>
+
+						    <option value="43"> Ninh Thuận </option>
+
+						    <option value="44"> Phú Thọ </option>
+
+						    <option value="45"> Phú Yên </option>
+
+						    <option value="46"> Quảng Bình </option>
+
+						    <option value="47"> Quảng Nam </option>
+
+						    <option value="48"> Quảng Ngãi </option>
+
+						    <option value="49"> Quảng Ninh </option>
+
+						    <option value="50"> Quảng Trị </option>
+
+						    <option value="51"> Sóc Trăng </option>
+
+						    <option value="52"> Sơn La </option>
+
+						    <option value="53"> Tây Ninh </option>
+
+						    <option value="54"> Thái Bình </option>
+
+						    <option value="55"> Thái Nguyên </option>
+
+						    <option value="56"> Thanh Hóa </option>
+
+						    <option value="57"> Thừa Thiên - Huế </option>
+
+						    <option value="58"> Tiền Giang </option>
+
+						    <option value="59"> Trà Vinh </option>
+
+						    <option value="60"> Tuyên Quang </option>
+
+						    <option value="61"> Vĩnh Long </option>
+
+						    <option value="62"> Vĩnh Phúc </option>
+
+						    <option value="63"> Yên Bái </option>
+
+					    </select> -->
+
+
+									<label id="txtHint"></label>
+
+                                </div>
+                            </div>
+
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Họ và tên</label>
+                                </div>
+                                <div class="div_input_inner">
+                                   <!-- <input type="text" name="TenNguoiDaiDien" size="60" maxlength="80" id="Text1"> -->
+                                    {{form.TenNguoiDaiDien}}
+                                </div>
+								<input name="token" type="text" size="60" maxlength="200" value="EE725CCAF196EF907509C3A28F89FD8534356B29E1B9527F5040B045619E59BC" id="Text4" hidden="">
+                            </div>
+							<div class="div_input">
+                                <div class="div_label">
+                                    <label>* Email/Username</label>
+                                </div>
+                                <div class="div_input_inner">
+                                  <!-- <input type="text" name="txtEmail" size="60" maxlength="80" id="Text2"> -->
+                                  {{form.TenTK}}
+                                </div>
+                            </div>
+                            <div class="div_input">
+                                <div class="div_label">
+                                    <label>* Điện thoại</label>
+                                </div>
+                                <div class="div_input_inner">
+                                     <!-- <input type="text" name="DienThoaiNguoiDaiDien" size="15" maxlength="15" id="Text11">
+                                     -->
+                                     {{form.DienThoaiNguoiDaiDien}}
+                                </div>
+                            </div>
+                            <!-- <div class="div_input">
+                                <div class="div_label">
+                                </div>
+                                <div class="div_input_inner">
+                                    <div class="show_captcha">
+                                        <div class="img_captcha"><img src="Vtrue-register_files/9.jpeg" width="105" height="33" border="0"></div>
+
+                                    </div>
+                                    <div class="txt_captcha"><input type="text" id="t2" name="maxt" placeholder="Nhập mã Capcha" class="in_dkf_r33"></div>
+                                </div>
+                            </div> -->
+                            <div class="div_input">
+                                <div class="div_label">
+                                </div>
+                                <div class="div_input_inner">
+                                    <div class="div_btn_check">
+                                        <button class="btn_gen"><span>Đồng ý</span></button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="bot_contact">
+                        <h3>Liên hệ</h3>
+                        <p>Trụ sở chính</p>
+                        <ul class="ul_contact_info">
+                            <li>
+                                <img src="Vtrue-register_files/ico-map.html" alt="map">
+                                <span>Số 26BT1 Bắc Linh Đàm, Quận Hoàng Mai, Thành phố Hà Nội</span>
+                            </li>
+                            <li>
+                                <img src="Vtrue-register_files/ico-phone.html" alt="map">
+                                <span>1900 6609</span>
+                            </li>
+
+                            <li>
+                                <img src="Vtrue-register_files/icon-email.html" alt="map">
+                                <a href="mailto: contact@vtrue.vn">contact@vtrue.vn</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: CONTENT DETAIL -->
+<script>
+
+$(document).ready(function() {
+      var owl = $("#lkh1");
+      owl.owlCarousel({
+      items : 2, //10 items above 1000px browser width
+      itemsDesktop : [1000,2], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+      itemsTablet: [600,2],
+	    autoPlay : 3000,
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      });
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+    });
+</script>
+{% endblock %}
+
